@@ -131,3 +131,19 @@ hr{
     font-weight:600;
     margin-bottom:15px;
 }
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #B3B3B3;
+    padding: 25px 0 15px 0;
+    font-size: 15px;
+}
+
+.footer p {
+    margin: 6px 0;
+}
+
+.footer strong {
+    color: white;
+}

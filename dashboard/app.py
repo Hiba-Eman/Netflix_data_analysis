@@ -26,9 +26,6 @@ st.html("""
         Explore Netflix movies and TV shows through 
         interactive visualizations and business insights.
     </p>
-    <div class="tech">
-        Python • Pandas • NumPy • Matplotlib • Seaborn • Streamlit
-    </div>
 </div>
 """)
 
@@ -118,7 +115,9 @@ filtered_df = filtered_df[
     (filtered_df["release_year"] <= selected_year[1])
 ]
 
-col1, col2, col3, col4 = st.columns(4)
+if filtered_df.empty:
+    st.warning("No titles match the selected filters. Please choose different filters.")
+    st.stop()
 
 # KPI CALCULATIONS
 total_titles = len(filtered_df)
@@ -493,3 +492,16 @@ with col8:
     st.pyplot(fig)
 
     st.markdown("</div>", unsafe_allow_html=True)
+
+#FOOTER
+st.markdown("---")
+
+st.markdown("""
+<div class="footer">
+    <p><strong>Created by Hiba Eman</strong></p>
+    <p>
+        Built with Python • Pandas • NumPy • Matplotlib • Seaborn • Streamlit
+    </p>
+    <p>© 2026 Netflix Data Analysis Dashboard</p>
+</div>
+""", unsafe_allow_html=True)
