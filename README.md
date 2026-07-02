@@ -60,8 +60,8 @@ Netflix-Data-Analysis/
 │   ├── app.py
 │   └── style.css
 │
-│── notebooks/
-│   └── Netflix_Data_Analysis.ipynb
+│── analysis.ipynb/
+│── requirements.txt/
 │── README.md
 │── LICENSE
 │── .gitignore
