@@ -505,3 +505,12 @@ st.markdown("""
     <p>© 2026 Netflix Data Analysis Dashboard</p>
 </div>
 """, unsafe_allow_html=True)
+
+hide_style = """
+    <style>
+    header {visibility: hidden;}
+    div[data-testid="stToolbar"] {display: none !important;}
+    div[data-testid="stDecoration"] {display: none !important;}
+    </style>
+"""
+st.markdown(hide_style, unsafe_allow_html=True)
